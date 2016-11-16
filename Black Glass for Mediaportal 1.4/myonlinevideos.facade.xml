@@ -129,6 +129,7 @@
 					<onleft>2</onleft>
 					<onright>2</onright>
 					<scrollOffset>2</scrollOffset>
+					<playedColor>#ColorPlayed</playedColor>
 					<visible>facadeview.list</visible>
 					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
 				</control>

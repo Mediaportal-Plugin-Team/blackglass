@@ -146,6 +146,27 @@
 		<textcolorNoFocus>60ffffff</textcolorNoFocus>
 	</control>
 	<control>
+		<description>default togglebutton</description>
+		<type>checkbutton</type>
+		<id>0</id>
+		<posX>533</posX>
+		<posY>250</posY>
+		<width>385</width>
+		<height>53</height>
+		<textXOff>30</textXOff>
+		<textYOff>8</textYOff>
+		<AltTextureFocus>togglebutton-off-focus.png</AltTextureFocus>
+		<AltTextureNoFocus>togglebutton-off-nofocus.png</AltTextureNoFocus>
+		<textureFocus>togglebutton-on-focus.png</textureFocus>
+		<textureNoFocus>togglebutton-on-nofocus.png</textureNoFocus>
+		<label>-</label>
+		<font>font18</font>
+		<selectedColor>ffffffff</selectedColor> 
+		<textcolor>ffffffff</textcolor> 
+		<disabledcolor>30ffffff</disabledcolor>
+		<textcolorNoFocus>60ffffff</textcolorNoFocus>
+	</control>
+	<control>
 		<description>default playlist item listcontrol</description>
 		<type>playlistcontrol</type>
 		<id>0</id>

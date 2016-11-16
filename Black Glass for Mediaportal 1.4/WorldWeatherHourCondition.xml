@@ -61,7 +61,7 @@
 				<id>0</id>
 				<posX>0</posX>
 				<posY>154</posY>
-				<label>#WorldWeather.HourForecastProvider: #WorldWeather.RefreshDate #WorldWeather.RefreshTime</label>
+				<label>#WorldWeather.ForecastHourProvider: #WorldWeather.RefreshDate #WorldWeather.RefreshTime</label>
 				<font>font13</font>
 				<textcolor>60ffffff</textcolor>
 				<align>center</align>

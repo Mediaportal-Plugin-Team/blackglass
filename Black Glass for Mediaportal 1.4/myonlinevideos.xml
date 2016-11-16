@@ -138,12 +138,12 @@
 			</control>
 			<control>
 				<description>Length</description>
-				<type>label</type>
+				<type>fadelabel</type>
 				<id>501</id>
 				<posX>30</posX>
 				<posY>417</posY>
 				<width>385</width>
-				<label>#selecteditem2</label>
+				<label>#(switch(eq(#OnlineVideos.length,''),'#OnlineVideos.aired',neq(#OnlineVideos.length,''),'#OnlineVideos.length     #OnlineVideos.aired'))</label>
 				<textcolor>90ffffff</textcolor>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>

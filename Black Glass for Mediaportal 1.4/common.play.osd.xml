@@ -3,16 +3,14 @@
 	<controls>
 		<control>
 			<description>Video Position Menu</description>
-			<type>checkbutton</type>
+			<type>button</type>
 			<id>220</id>
 			<posX>31</posX>
 			<posY>417</posY>
 			<width>90</width>
 			<height>90</height>
-			<AltTextureFocus>osd_button_video.png</AltTextureFocus>
-			<AltTextureNoFocus>osd_button_video_nf.png</AltTextureNoFocus>
 			<textureFocus>osd_button_video.png</textureFocus>
-			<textureNoFocus>osd_button_video.png</textureNoFocus>
+			<textureNoFocus>osd_button_videonf.png</textureNoFocus>
 			<label>-</label>
 			<font>font12</font>
 			<onleft>220</onleft>
@@ -24,16 +22,14 @@
 		</control>
 		<control>
 			<description>Audio Menu</description>
-			<type>checkbutton</type>
+			<type>button</type>
 			<id>221</id>
 			<posX>31</posX>
 			<posY>490</posY>
 			<width>90</width>
 			<height>90</height>
-			<AltTextureFocus>osd_button_audio.png</AltTextureFocus>
-			<AltTextureNoFocus>osd_button_audio_nf.png</AltTextureNoFocus>
 			<textureFocus>osd_button_audio.png</textureFocus>
-			<textureNoFocus>osd_button_audio.png</textureNoFocus>
+			<textureNoFocus>osd_button_audionf.png</textureNoFocus>
 			<label>-</label>
 			<font>font12</font>
 			<onleft>221</onleft>
@@ -45,16 +41,14 @@
 		</control>
 		<control>
 			<description>Subtitles Menu</description>
-			<type>checkbutton</type>
+			<type>button</type>
 			<id>218</id>
 			<posX>31</posX>
 			<posY>565</posY>
 			<width>90</width>
 			<height>90</height>
-			<AltTextureFocus>osd_button_subtitles.png</AltTextureFocus>
-			<AltTextureNoFocus>osd_button_subtitles_nf.png</AltTextureNoFocus>
 			<textureFocus>osd_button_subtitles.png</textureFocus>
-			<textureNoFocus>osd_button_subtitles.png</textureNoFocus>
+			<textureNoFocus>osd_button_subtitlesnf.png</textureNoFocus>
 			<label>-</label>
 			<font>font12</font>
 			<onleft>218</onleft>
@@ -67,7 +61,7 @@
 
 		<!-- 		<control>
 			<description>Bookmarks Menu</description>
-			<type>checkbutton</type>
+			<type>button</type>
 			<id>219</id>
 			<posX>256</posX>
 			<posY>537</posY>
@@ -788,7 +782,7 @@
 
 		<control>
 			<description>Skip Bwd - osd_back_focus.png / osd_back_nofocus.png</description>
-			<type>checkbutton</type>
+			<type>button</type>
 			<id>210</id>
 			<posX>190</posX>
 			<posY>642</posY>
@@ -808,7 +802,7 @@
 		</control>
 		<control>
 			<description>Rewind - osd_rewind_focus.png / osd_rewind_nofocus.png</description>
-			<type>checkbutton</type>
+			<type>button</type>
 			<id>211</id>
 			<posX>97</posX>
 			<posY>578</posY>
@@ -864,7 +858,7 @@
 		</control>
 		<control>
 			<description>Fast Forward - osd_fastforward_focus.png / osd_fastforward_nofocus.png</description>
-			<type>checkbutton</type>
+			<type>button</type>
 			<id>214</id>
 			<posX>284</posX>
 			<posY>578</posY>
@@ -884,7 +878,7 @@
 		</control>
 		<control>
 			<description>Skip Fwd - osd_next_focus.png / osd_next_nofocus.png</description>
-			<type>checkbutton</type>
+			<type>button</type>
 			<id>215</id>
 			<posX>190</posX>
 			<posY>513</posY>
@@ -904,7 +898,7 @@
 		</control>
 		<control>
 			<description>Mute - osd_mute_focus.png / osd_mute_nofocus.png</description>
-			<type>checkbutton</type>
+			<type>button</type>
 			<id>216</id>
 			<posX>254</posX>
 			<posY>622</posY>

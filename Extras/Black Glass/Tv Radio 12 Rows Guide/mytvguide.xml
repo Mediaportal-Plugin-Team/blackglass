@@ -32,7 +32,6 @@
 			<height>482</height>
 			<texture>bg_tvguide.png</texture>
 		</control>
-
 		<control>
 			<description>TVGUIDE Panel</description>
 			<type>image</type>
@@ -52,7 +51,7 @@
 			<posY>414</posY>
 			<font>font18</font>
 			<align>left</align>
-			<textcolor>60FFFFFF</textcolor>
+			<textcolor>90FFFFFF</textcolor>
 			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
 			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
@@ -66,7 +65,7 @@
 			<height>44</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
-			<texture>defaultVideoBig.png</texture>
+			<texture>defaultVideo.png</texture>
 			<align>left</align>
 			<valign>top</valign>
 			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
@@ -199,14 +198,18 @@
 		</control>
 		<control>
 			<description>TvGroup button</description>
-			<type>button</type>
+			<type>button3part</type>
 			<id>100</id>
 			<posX>21</posX>
 			<posY>127</posY>
 			<width>45</width>
 			<height>358</height>
-			<textureNoFocus>tvguide_button_group_nofocus.png</textureNoFocus>
-			<textureFocus>tvguide_button_group_focus.png</textureFocus>
+			<textureFocusedLeft>tvguide_button_group_focus.png</textureFocusedLeft>
+			<textureNonFocusedLeft>tvguide_button_group_nofocus.png</textureNonFocusedLeft>
+			<textureFocusedMid>tvguide_button_group_focus.png</textureFocusedMid>
+			<textureNonFocusedMid>tvguide_button_group_nofocus.png</textureNonFocusedMid>
+			<textureFocusedRight>tvguide_button_group_focus.png</textureFocusedRight>
+			<textureNonFocusedRight>tvguide_button_group_nofocus.png</textureNonFocusedRight>
 			<label/>
 			<onleft>60</onleft>
 			<onright>6</onright>
@@ -214,17 +217,96 @@
 			<ondown>6</ondown>
 		</control>
 		<control>
-			<description>TvGroup button label</description>
+			<description>TvGroup button label unfocus</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>28</posX>
+			<posY>470</posY>
+			<label>#TV.Guide.ChangeGroup</label>
+			<textcolor>90FFFFFF</textcolor>
+			<visible>!control.hasfocus(100)</visible>
+			<animation effect="rotate" end="90" time="0" condition="!control.hasfocus(100)">conditional</animation>
+		</control>
+		<control>
+			<description>TvGroup button label focus</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>28</posX>
 			<posY>470</posY>
 			<label>#TV.Guide.ChangeGroup</label>
 			<textcolor>ffFFFFFF</textcolor>
-			<align>left</align>
-			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
-			<animation effect="rotate" end="90" time="0">WindowClose</animation>
+			<visible>control.hasfocus(100)</visible>
+			<animation effect="rotate" end="90" time="0" condition="control.hasfocus(100)">conditional</animation>
 		</control>
+		<control>
+			<description>All Channels label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>28</posX>
+			<posY>460</posY>
+			<label>972</label>
+			<textcolor>90FFFFFF</textcolor>
+			<visible>!control.isvisible(100)+!control.isvisible(33)</visible>
+			<animation effect="rotate" end="90" time="0" condition="!control.isvisible(100)+!control.isvisible(33)">conditional</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>21</posX>
+			<posY>427</posY>
+			<height>43</height>
+			<width>45</width>
+			<texture>tvguide_button_light_middle.png</texture>
+			<visible>!control.isvisible(100)</visible>
+		</control>
+		<!-- <control>
+			<description>template for program running button</description>
+			<type>button3part</type>
+			<id>35</id>
+			<textureFocusedLeft tileFill="no">tvguide_button_selected_left.png</textureFocusedLeft>
+			<textureNonFocusedLeft tileFill="no">tvguide_button_left.png</textureNonFocusedLeft>
+			<textureFocusedMid tileFill="no">tvguide_button_selected_middle.png</textureFocusedMid>
+			<textureNonFocusedMid tileFill="no">tvguide_button_middle.png</textureNonFocusedMid>
+			<textureFocusedRight tileFill="no">tvguide_button_selected_right.png</textureFocusedRight>
+			<textureNonFocusedRight tileFill="no">tvguide_button_right.png</textureNonFocusedRight>
+			<textureIcon>-</textureIcon>
+		</control>
+		<control>
+			<description>template for program not running button</description>
+			<type>button3part</type>
+			<id>36</id>
+			<textureFocusedLeft tileFill="no">tvguide_button_selected_left.png</textureFocusedLeft>
+			<textureNonFocusedLeft tileFill="no">tvguide_button_light_left.png</textureNonFocusedLeft>
+			<textureFocusedMid tileFill="no">tvguide_button_selected_middle.png</textureFocusedMid>
+			<textureNonFocusedMid tileFill="no">tvguide_button_light_middle.png</textureNonFocusedMid>
+			<textureFocusedRight tileFill="no">tvguide_button_selected_right.png</textureFocusedRight>
+			<textureNonFocusedRight tileFill="no">tvguide_button_light_right.png</textureNonFocusedRight>
+			<textureIcon>-</textureIcon>
+		</control>
+		<control>
+			<description>template for program notify button</description>
+			<type>button3part</type>
+			<id>37</id>
+			<textureFocusedLeft tileFill="no">tvguide_notifyButton_Focus_left.png</textureFocusedLeft>
+			<textureNonFocusedLeft tileFill="no">tvguide_notifyButton_noFocus_left.png</textureNonFocusedLeft>
+			<textureFocusedMid tileFill="no">tvguide_notifyButton_Focus_middle.png</textureFocusedMid>
+			<textureNonFocusedMid tileFill="no">tvguide_notifyButton_noFocus_middle.png</textureNonFocusedMid>
+			<textureFocusedRight tileFill="no">tvguide_notifyButton_Focus_right.png</textureFocusedRight>
+			<textureNonFocusedRight tileFill="no">tvguide_notifyButton_noFocus_right.png</textureNonFocusedRight>
+			<textureIcon>-</textureIcon>
+		</control>
+		<control>
+			<description>template for program record button</description>
+			<type>button3part</type>
+			<id>38</id>
+			<textureFocusedLeft tileFill="no">tvguide_recButton_Focus_left.png</textureFocusedLeft>
+			<textureNonFocusedLeft tileFill="no">tvguide_recButton_noFocus_left.png</textureNonFocusedLeft>
+			<textureFocusedMid tileFill="no">tvguide_recButton_Focus_middle.png</textureFocusedMid>
+			<textureNonFocusedMid tileFill="no">tvguide_recButton_noFocus_middle.png</textureNonFocusedMid>
+			<textureFocusedRight tileFill="no">tvguide_recButton_Focus_right.png</textureFocusedRight>
+			<textureNonFocusedRight tileFill="no">tvguide_recButton_Focus_right.png</textureNonFocusedRight>
+			<textureIcon>-</textureIcon>
+		</control> -->
 
 
 		<!-- INFO -->
@@ -271,7 +353,7 @@
 		</control>
 		<control>
 			<type>image</type>
-			<id>0</id>
+			<id>98</id>
 			<posX>32</posX>
 			<posY>535</posY>
 			<width>255</width>
@@ -323,6 +405,31 @@
 			<seperator>: : :</seperator>
 			<label>#TV.Guide.Description</label>
 		</control>
+
+
+		<control>
+			<description>Template for genre key color</description>
+			<type>image</type>
+			<id>110</id>
+			<posX>2080</posX>
+			<posY>522</posY>
+			<width>32</width>
+			<height>18</height>
+			<texture overlay="tvguide_button_middle_colorize_overlay.png">tvguide_button_middle_colorize.png</texture>
+			<visible>skin.hassetting(#skin.tvguide.showgenrekey) + skin.hassetting(#skin.tvguide.usecolorsforgenre)</visible>
+		</control>
+		<control>
+			<description>Template for genre key name</description>
+			<type>fadelabel</type>
+			<id>111</id>
+			<posY>520</posY>
+			<width>170</width>
+			<scrollStartDelaySec>10000</scrollStartDelaySec>
+			<textcolor>FF6aa5cb</textcolor>
+			<font>font10</font>
+			<visible>skin.hassetting(#skin.tvguide.showgenrekey) + skin.hassetting(#skin.tvguide.usecolorsforgenre)</visible>
+		</control>
+
 
 		<!-- GRID -->
 
@@ -389,6 +496,5 @@
 			<texture>tvguide_record_button.png</texture>
 			<visible>no</visible>
 		</control>
-
 	</controls>
 </window>

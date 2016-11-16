@@ -27,7 +27,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(6)+[!control.isvisible(50)]">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="control.hasfocus(6)+[control.isvisible(50)]">conditional</animation>
 
 			<control>
 				<description>Cover Art</description>
@@ -169,7 +169,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(6)+[!control.isvisible(50)]">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="control.hasfocus(6)+[control.isvisible(50)]">conditional</animation>
 			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
 
@@ -467,7 +467,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(6)</visible>
+			<visible>control.isvisible(50)+control.isvisible(51)+control.hasfocus(6)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
