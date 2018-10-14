@@ -5,8 +5,8 @@
 		<control>
 			<type>image</type>
 			<id>999500</id>
-			<posX>524</posX>
-			<posY>40</posY>
+			<posX>20</posX>
+			<posY>20</posY>
 			<width>231</width>
 			<height>72</height>
 			<texture>volume.states.back.png</texture>
@@ -16,8 +16,8 @@
 		<control>
 			<type>image</type>
 			<id>500</id>
-			<posX>524</posX>
-			<posY>40</posY>
+			<posX>20</posX>
+			<posY>20</posY>
 			<width>231</width>
 			<height>72</height>
 			<texture>volume.states.mute.png</texture>
@@ -27,8 +27,8 @@
 		<control>
 			<type>volumebar</type>
 			<id>501</id>
-			<posX>584</posX>
-			<posY>64</posY>
+			<posX>80</posX>
+			<posY>44</posY>
 			<align>left</align>
 			<height>26</height>
 			<width>144</width>
