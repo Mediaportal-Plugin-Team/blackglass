@@ -420,8 +420,7 @@
 				<type>label</type>
 				<posX>1150</posX>
 				<posY>676</posY>
-				<!-- <label>#(string.format('{0:f2}', #MovingPictures.LocalMedia.videoframerate))</label> -->
-				<label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
+				<label>#(string.format('{0:#,0.000}', cflt(#MovingPictures.LocalMedia.videoframerate)))</label>
 				<font>font11</font>
 				<align>center</align>
 				<width>73</width>
