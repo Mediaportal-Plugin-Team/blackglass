@@ -12,6 +12,10 @@
       <type>label</type>
       <id>2</id>
       <textsize>22</textsize>
+      <posX>216</posX>
+      <posY>312</posY>
+      <width>848</width>
+      <height>96</height>
       <textcolor>#ffffff</textcolor>
     </control>
   </controls>
